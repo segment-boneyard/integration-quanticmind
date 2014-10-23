@@ -1,0 +1,29 @@
+{
+  "input": {
+    "type": "track",
+    "userId": "702F48C3-7F9A-45D9-B229-17EB2B037623",
+    "timestamp": "2014",
+    "event": "user_state_change:Applied",
+    "properties": {
+      "url": "https://segment.io/docs/tracking-api/page-and-screen/",
+      "revenue": 99.92,
+      "orderId": "3-abcd"
+    },
+    "context": {
+      "ip": "10.0.0.1",
+      "referrer": {
+        "url":"https://segment.io/integrations"
+      }
+    }
+  },
+  "output": [{
+    "u": "702F48C3-7F9A-45D9-B229-17EB2B037623",
+    "t": 1388534400000,
+    "z": 0,
+    "r": 0,
+    "act": "event2",
+    "actv": 99.92,
+    "actcid": "3-abcd",
+    "a": 3
+  }]
+}
