@@ -29,7 +29,6 @@ describe('Inside Vault', function(){
       .channels(['server'])
       .ensure('settings.clientId')
       .ensure('message.userId')
-      .retries(2);
   });
 
   describe('.validate()', function() {
