@@ -28,7 +28,7 @@ describe('Inside Vault', function(){
       .name('InsideVault')
       .channels(['server'])
       .ensure('settings.clientId')
-      .ensure('message.userId')
+      .ensure('message.anonymousId')
   });
 
   describe('.validate()', function() {
@@ -37,9 +37,9 @@ describe('Inside Vault', function(){
     });
 
     it('should be valid with complete settings', function(){
-      test.valid({userId:'abc'}, settings);
+      test.valid({anonymousId:'abc'}, settings);
     });
-    it('should require valid userId', function(){
+    it('should require valid anonymousId', function(){
       test.invalid({}, settings);
     });
   });
