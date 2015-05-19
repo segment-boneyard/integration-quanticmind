@@ -53,11 +53,17 @@ describe('Inside Vault', function(){
       it('should map multi track', function(){
         test.maps('track-multi');
       });
-    });
 
-    it('should map bare track', function(){
+      it('should map bare track', function(){
         test.maps('track-bare');
       });
+
+      it('should map noclick', function(){
+        test.maps('track-noclick');
+      });
+    });
+
+
 
     describe('page', function(){
       it('should map basic page', function(){
