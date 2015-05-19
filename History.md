@@ -1,4 +1,9 @@
 
+1.2.0 / 2015-05-19
+==================
+
+ * add optional noclick for order-attributed conversions
+
 1.1.6 / 2015-05-07
 ==================
 
