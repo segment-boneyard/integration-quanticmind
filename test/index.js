@@ -15,7 +15,8 @@ describe('Inside Vault', function(){
       events: {
         'user_state_change:Applied':'event2',
         'user_state_change:Enrolled':'event3'
-      }
+      },
+      noclick: false
     };
     insideVault = new InsideVault(settings);
     test = Test(insideVault, __dirname);
@@ -28,7 +29,6 @@ describe('Inside Vault', function(){
       .name('InsideVault')
       .channels(['server'])
       .ensure('settings.clientId')
-      .ensure('message.anonymousId')
   });
 
   describe('.validate()', function() {
@@ -36,11 +36,15 @@ describe('Inside Vault', function(){
       test.invalid({}, {});
     });
 
-    it('should be valid with complete settings', function(){
+    it('should always be valid with anonymousId and complete settings', function(){
       test.valid({anonymousId:'abc'}, settings);
     });
-    it('should require valid anonymousId', function(){
+
+    it('should only require anonymousId when not using orderId attribution', function(){
       test.invalid({}, settings);
+      test.valid({anonymousId: '123'}, settings)
+      settings.noclick = true;
+      test.valid({}, settings);
     });
   });
 
