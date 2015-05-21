@@ -1,4 +1,9 @@
 
+1.2.1 / 2015-05-21
+==================
+
+ * update ensure to pass w/o anonId when using orderId attribution
+
 1.2.0 / 2015-05-19
 ==================
 
