@@ -1,12 +1,12 @@
 {
-  "name": "integration-inside-vault",
+  "name": "integration-quanticmind",
   "version": "1.2.1",
   "private": true,
-  "description": "InsideVault server-side integration",
+  "description": "QuanticMind server-side integration",
   "author": "Segment <friends@segment.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/segmentio/integration-inside-vault"
+    "url": "https://github.com/segmentio/integration-quanticmind"
   },
   "main": "lib/index.js",
   "scripts": {
