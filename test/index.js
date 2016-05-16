@@ -1,11 +1,11 @@
 
 var Test = require('segmentio-integration-tester');
-var InsideVault = require('../');
+var QuanticMind = require('../');
 var mapper = require('../lib/mapper');
 var assert = require('assert');
 
-describe('Inside Vault', function(){
-  var insideVault;
+describe('QuanticMind', function(){
+  var quanticMind;
   var settings;
   var test;
 
@@ -18,15 +18,15 @@ describe('Inside Vault', function(){
       },
       noclick: false
     };
-    insideVault = new InsideVault(settings);
-    test = Test(insideVault, __dirname);
+    quanticMind = new QuanticMind(settings);
+    test = Test(quanticMind, __dirname);
     test.mapper(mapper);
     mapper.random = function(){ return 0; };
   });
 
   it('should have the correct settings', function(){
     test
-      .name('InsideVault')
+      .name('QuanticMind')
       .channels(['server'])
       .ensure('settings.clientId')
   });
@@ -100,7 +100,7 @@ describe('Inside Vault', function(){
 
     it('should send multiple events', function(done){
       var json = test.fixture('track-multi');
-      insideVault.settings.events = json.settings.events;
+      quanticMind.settings.events = json.settings.events;
       test.track(json.input);
       test.requests(2);
 
