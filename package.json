@@ -29,8 +29,5 @@
     "segmentio-facade": "2.x",
     "segmentio-integration-tester": "1.x",
     "should": "~4.0.4"
-  },
-  "publishConfig": {
-    "registry": "https://segmentio.registry.nodejitsu.com"
   }
 }
