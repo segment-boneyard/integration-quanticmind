@@ -15,17 +15,19 @@
   "dependencies": {
     "batch": "^0.5.1",
     "obj-case": "^0.1.1",
-    "segmentio-integration": "^5.0.1"
+    "segmentio-integration": "^5.1.0"
   },
   "devDependencies": {
+    "@segment/eslint-config": "^3.4.0",
+    "eslint": "^2.13.1",
+    "eslint-plugin-mocha": "^2.2.0",
+    "eslint-plugin-react": "^4.3.0",
+    "eslint-plugin-require-path-exists": "^1.1.5",
     "istanbul": "^0.3.0",
     "jscs": "^1.6.2",
     "mocha": "*",
+    "segmentio-facade": "2.x",
     "segmentio-integration-tester": "1.x",
-    "should": "~4.0.4",
-    "segmentio-facade": "2.x"
-  },
-  "publishConfig": {
-    "registry": "https://segmentio.registry.nodejitsu.com"
+    "should": "~4.0.4"
   }
 }
